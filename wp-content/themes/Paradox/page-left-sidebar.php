@@ -6,10 +6,21 @@ Template Name: Left Sidebar
 
 <?php get_header(); ?>
 
-<section class="primary-content">
-    <div class="container col-no-padding-xs">        
+<section class="masthead">
+    <div class="background">&nbsp;</div>
+    <div class="container">
         <div class="row">
-            <section class="main-col page-content col-sm-7 col-sm-push-5 container">                
+            <div class="col-sm-8 col-sm-offset-2">
+                <h2 class="text-center"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title('') ?></a></h2>            
+            </div>
+        </div>
+    </div>
+</section>  
+
+<section class="primary-content">
+    <div class="container">        
+        <div class="row">
+            <section class="main-col page-content col-sm-7 col-sm-push-5">                
                 <div id="main" class="site-main" role="main">
                     <?php 
                     while (have_posts()) {

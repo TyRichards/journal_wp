@@ -1,5 +1,9 @@
 // Base Styles /////////////////////////////////////////////////////////////////
 
+body {
+    background: $brand-dark image-url('bg.png') repeat fixed top left;
+}
+
 a {
     @include transition(all 0.2s ease-in);    
 }
@@ -11,13 +15,13 @@ a:hover {
 
 h1 {
     color: $h1-color;
-    font-family: $font-family-display!important;
+    // font-family: $font-family-display!important;
 }
 
 ul li {
     // counter-increment: foo;
-    display: table-row;
-    list-style: none;
+    // display: table-row;
+    // list-style: disc;
 }
 
 ol {
@@ -25,8 +29,16 @@ ol {
     display: table;
 }
 
-ol, ul {
-    margin-bottom: 0px;
+.body-content {
+    ol, ul {
+        margin-bottom: 0px;
+        padding-left: 50px;
+        margin-top: 35px;
+        li { margin-bottom: 15px; } 
+    }
+    .gform_wrapper {
+        .gforms_fields, ul { padding-left: 0; }
+    }
 }
 
 button:focus {
@@ -54,13 +66,26 @@ iframe {
     height: auto;
 }
 
-header .navbar-brand {
-    // padding-top: 15px;
+// Header //////
 
-    img {
-        width: 240px;
-        height: auto;
-        float: left;
+header {
+    position: relative;
+    .navbar-header {
+        float: none;
+        .navbar-text { float: none; }
+        .navbar-brand {
+            // padding-top: 15px;
+            position: absolute;
+            top: 11px;
+            width: 59px;
+            height: 48px;
+            left: 20px;
+            padding: 0;
+            img {
+                width: 59px;
+                height: auto;               
+            }
+        }
     }
 }
 
@@ -110,7 +135,47 @@ header .navbar-brand {
 
 .masthead {
     background-color: transparent;
-    h2 { color: #ffffff; }
+    h1 { 
+        color: #ffffff; 
+        a { 
+            color: #ffffff; 
+            &:hover { color: $brand-primary; }
+        }
+    }
+}
+
+
+
+// Blog Article //////////////////////////////////////////////////////////////
+
+article {
+    .entry-header { 
+        font-style: italic;
+        font-family: $font-family-serif; 
+        text-align: center;
+    }
+    .entry-content {
+        border-bottom: 1px solid #bbbbbb;
+        padding-bottom: 55px;
+        margin-bottom: 29px;
+    }
+    .gform-wrapper {
+        // @extend .well
+    }
+    .entry-meta-category-tag {
+        margin-bottom: 55px;
+        margin-top: 10px;
+    }
+}
+
+.slash {
+    font-size: 40px;
+    font-weight: 100;
+    vertical-align: -6px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #dddddd;
+    font-style: normal;
 }
 
 // Sidebar Feature Image /////////////////////////////////////////////////////////////////
@@ -122,6 +187,10 @@ header .navbar-brand {
 }
 
 // Buttons /////////////////////////////////////////////////////////////////
+
+.comments-button a {
+    @extend .btn, .btn-primary, .btn-sm
+}
 
 .body-content .btn {
 margin: $paragraph-top-margin;
@@ -273,9 +342,9 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 0px;
 }
 
-.site-main {
+.primary-content {
     h2, h3, h4, h5, h6 {
-        margin: $paragraph-top-margin;
+        margin-top: 45px;
         margin-bottom: 0px;
     }
 }
@@ -322,28 +391,38 @@ h1, h2, h3, h4, h5, h6 {
 .body-content {
 
     ul li:before {
-        font-family: 'FontAwesome';
-        content: "\f054";
-        padding-right: 15px;        
+        // font-family: 'FontAwesome';
+        // content: "\f054";
+        // padding-right: 15px;        
         color: $list-bullet-color;
     }
 }
 
+small, .small {
+    line-height: 1.5!important;
+}
+
 // Gravity Forms
 
-.ginput_container input, .ginput_container select, .ginput_container textarea {
-    padding-left: 8px;
-    padding-right: 8px;
-}
-
-.gform_wrapper .gform_button {
-    @extend .btn-primary    
-}
-
+.gform_wrapper {
+    @extend .col-sm-8, .col-sm-offset-2;
+    .gform_title { @extend .h2; margin-top: 0!important; }
+    .gform_description { 
+        @extend .small; 
+        display: block;        
+    }
+    .gform_fields { 
+        @extend .row; 
+        .gfield { @extend .col-sm-6 }
+    }
+    .gform_button { 
+        @extend .btn-primary, .btn-block; 
+        margin-top: 15px;
+    }
+}   
 
 
 .body-content .gform_body {
-
     ul li:before {
         font-family: inherit;
         content: none;
@@ -352,7 +431,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-
+.ginput_container input, .ginput_container select, .ginput_container textarea { padding-left: 8px; padding-right: 8px; }
 
 // Logos Sections /////////////////////////////////////////////////////////////////
 
@@ -371,11 +450,10 @@ h1, h2, h3, h4, h5, h6 {
 // Paragraph /////////////////////////////////////////////////////////////////
 
 .body-content {
-
-    p, ul, ol {
+    p {
         margin: $paragraph-top-margin;
     }
-    ul { padding-left: 0 }
+    // ul { padding-left: 0 }
 }
 
 .lead {

@@ -17,7 +17,7 @@
 		<meta name="description" content="<?php bloginfo('description'); ?>">
 		<meta name="author" content="Shelly Morgan">
 		<title><?php wp_title('|', true, 'right'); ?></title>		
-		<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.png">
+		<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.ico">
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">	
 
 		<?php wp_head(); ?>
@@ -35,56 +35,34 @@
 		<![endif]-->	
 
 		<div id="bg">
-			<img src="<?php echo get_template_directory_uri(); ?>/assets/images/bg.jpg" alt="Sullivan Chimney Sweep">
+			<!-- <img src="<?php echo get_template_directory_uri(); ?>/assets/images/bg.jpg" alt="Sullivan Chimney Sweep"> -->
 		</div>				
 		
 		<?php do_action('before'); ?> 
 		<header>				
 			<section class="top-navbar">				
 				<nav class="navbar navbar-default" role="navigation">
-					<div class="container">						
+					<div class="container-fluid">						
 						<div class="navbar-header">																	
-							<button type="button" class="navbar-toggle navbar-right" data-toggle="collapse" data-target=".navbar-primary-collapse">
+<!-- 							<button type="button" class="navbar-toggle navbar-right" data-toggle="collapse" data-target=".navbar-primary-collapse">
 								<span class="sr-only"><?php _e('Toggle navigation', 'bootstrap-basic'); ?></span>
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>									
-							</button>
+							</button> -->
 							<a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>">
 								<?php // echo esc_attr(get_bloginfo('name', 'display')); ?>
-								<img style="max-width:210px; margin-top: -33px;" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png">
-							</a>					
+								<img src="<?php echo get_template_directory_uri(); ?>/assets/images/symbol.png">
+							</a>				
+							<p class="small navbar-text text-center">You're reading <a href="<?php echo esc_url(home_url('/')); ?>"><?php echo esc_attr(get_bloginfo('name', 'display')); ?></a>, a collection of articles from <a href="http://paradoxcreative.com" target="_blank">Paradox</a>. Happy <?php the_time('l'); ?>.</p>	
 						</div>						
-						<div class="collapse navbar-collapse navbar-primary-collapse">
-							<a class="btn btn-primary navbar-btn navbar-right hidden-xs" href="/schedule-inspection">
-								<i class="fa fa-phone fa-left"></i>Call (817) 914-4898
-							</a>     							
+<!-- 						<div class="collapse navbar-collapse navbar-primary-collapse">
 							<?php wp_nav_menu(array('theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav navbar-nav navbar-right', 'walker' => new BootstrapBasicMyWalkerNavMenu())); ?>
-						</div><!--.navbar-collapse-->
+						</div> --><!--.navbar-collapse-->
 					</div>
 				</nav>				
 			</section> <!-- section-navbar -->
 		</header>		
 			
 			
-		<div class="body-content">
-
-			<!-- Mobile Landing Section -->
-			<section class="mobile-landing visible-xs col-xs-12">
-			    <div class="col-xs-6 col-no-padding-xs phone" style="padding-right:5px">
-				    <a class="btn btn-primary btn-lg btn-block" href="/schedule-inspection">
-				        (972) 492-7920
-				    </a> 
-			    </div>
-			    <div class="col-xs-6 col-no-padding-xs phone" style="padding-left:5px">
-				    <a class="btn btn-primary btn-lg btn-block" href="/schedule-inspection">
-				        (214) 390-2050
-				    </a> 
-			    </div>
-			    <div class="col-xs-12 col-no-padding-xs call-to-action">
-				    <a class="btn btn-danger btn-lg btn-block col-xs-12" href="/schedule-inspection" style="margin-top:0px">
-				        <i class="fa fa-calendar fa-1x"></i>
-				        Schedule Inspection
-				    </a>
-			    </div>
-			</section>			
+		<div class="body-content">				

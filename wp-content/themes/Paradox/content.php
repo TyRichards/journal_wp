@@ -1,10 +1,15 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+		<!-- <h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1> -->
 
 		<?php if ('post' == get_post_type()) { ?> 
-		<div class="entry-meta">
-			<?php bootstrapBasicPostOn(); ?> 
+		<div class="entry-meta">		
+			<?php bootstrapBasicPostOn(); ?>
+			<span class="slash">/</span>	
+			<!-- comments -->	
+			<?php if (! post_password_required() && (comments_open() || '0' != get_comments_number())) { ?> 
+			<span class="comments-link"><?php bootstrapBasicCommentsPopupLink(); ?></span>
+			<?php } //endif; ?>  
 		</div><!-- .entry-meta -->
 		<?php } //endif; ?> 
 	</header><!-- .entry-header -->
@@ -33,8 +38,13 @@
 	</div><!-- .entry-content -->
 	<?php } //endif; ?> 
 
-	
-	<footer class="entry-meta">
+	<footer class="entry-meta text-center">
+
+		<!-- comments -->	
+		<?php if (! post_password_required() && (comments_open() || '0' != get_comments_number())) { ?> 
+		<span class="comments-button"><?php bootstrapBasicCommentsPopupLink(); ?></span>
+		<?php } //endif; ?>  
+
 		<?php if ('post' == get_post_type()) { // Hide category and tag text for pages on Search ?> 
 		<div class="entry-meta-category-tag">
 			<?php
@@ -59,12 +69,10 @@
 		</div><!--.entry-meta-category-tag-->
 		<?php } // End if 'post' == get_post_type() ?> 
 
-		<div class="entry-meta-comment-tools">
-			<?php if (! post_password_required() && (comments_open() || '0' != get_comments_number())) { ?> 
-			<span class="comments-link"><?php bootstrapBasicCommentsPopupLink(); ?></span>
-			<?php } //endif; ?> 
-
-			<?php bootstrapBasicEditPostLink(); ?> 
-		</div><!--.entry-meta-comment-tools-->
+		<div class="well well-lg">
+			<div class="row">
+				<?php gravity_form(1, true, true, false, null, false, 50); ?>
+			</div>
+		</div>
 	</footer><!-- .entry-meta -->
 </article><!-- #post-## -->

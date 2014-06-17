@@ -1,1 +1,1 @@
-<?php include('page-left-sidebar.php'); ?>
+<?php include('page-single-column.php'); ?>

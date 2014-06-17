@@ -6,10 +6,21 @@ Template Name: Single Column
 
 <?php get_header(); ?>
 
+<section class="masthead">
+    <div class="background">&nbsp;</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h1 class="text-center"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title('') ?></a></h1>            
+            </div>
+        </div>
+    </div>
+</section>  
+
 <section class="primary-content">
-    <div class="container col-no-padding-xs">        
-        <section class="container main-col col-sm-8 col-sm-offset-2 page-content">                
-            <div id="main" class="site-main" role="main">
+    <div class="container">    
+        <div class="row">    
+            <article class="main-col col-sm-8 col-sm-offset-2 page-content">                                
                 <?php 
                 while (have_posts()) {
                   the_post();
@@ -26,19 +37,10 @@ Template Name: Single Column
                   echo "\n\n";
 
                 } //endwhile;
-                ?> 
-                <a class="btn btn-danger" href="#">
-                    <i class="fa fa-phone fa-1x"></i>
-                    Call (972) 492-7920
-                </a>
-                    &nbsp;&nbsp;
-                <a class="btn btn-danger" href="/contact-us">
-                    <i class="fa fa-envelope fa-1x"></i>
-                    Email Us
-                </a> 
-            </div>           
-        </section>               
-    </div>
-</section>
+                ?>             
+            </article>  
+        </div> <!-- .row -->             
+    </div> <!-- .container -->
+</section> <!-- .primary-content -->
 
 <?php get_footer(); ?> 

@@ -4,15 +4,24 @@
  * 
  * @package bootstrap-basic
  */
+?>
 
-get_header(); 
+<?php get_header(); ?>
 
-/**
- * determine main column size from actived sidebar
- */
-$main_column_size = bootstrapBasicGetMainColumnSize();
-?> 
-<?php get_sidebar('left'); ?> 
+<section class="masthead">
+    <div class="background">&nbsp;</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+                <h2 class="text-center"><?php bloginfo('description'); ?></h2>  
+                <div class="text-center" style="margin-top:25px">
+                    <a href="#home"><i class="fa fa-chevron-down fa-3x"></i></a>
+                </div>              
+            </div>
+        </div>
+    </div>
+</section>
+
 				<div class="col-md-<?php echo $main_column_size; ?> content-area" id="main-column">
 					<main id="main" class="site-main" role="main">
 						<?php if (have_posts()) { ?> 

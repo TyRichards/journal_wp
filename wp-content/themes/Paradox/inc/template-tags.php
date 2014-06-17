@@ -14,7 +14,7 @@
  */
 function bootstrapBasicCategoriesList($categories_list = '') 
 {
-	return sprintf('<span class="categories-icon glyphicon glyphicon-th-list" title="' . __('Posted in', 'bootstrap-basic') . '"></span> %1$s', $categories_list);
+	return sprintf('<small><i class="fa fa-th-list fa-left" title="' . __('Posted in', 'bootstrap-basic') . '"></i>%1$s</small>', $categories_list);
 }// bootstrapBasicCategoriesList
 
 
@@ -125,9 +125,9 @@ function bootstrapBasicComment($comment, $args, $depth) {
  */
 function bootstrapBasicCommentsPopupLink() 
 {
-	$comment_icon = '<span class="comment-icon glyphicon glyphicon-comment"><small class="comment-total">%d</small></span>';
-	$comments_icon = '<span class="comment-icon glyphicon glyphicon-comment"><small class="comment-total">%s</small></span>';
-	return comments_popup_link(sprintf($comment_icon, ''), sprintf($comment_icon, '1'), sprintf($comments_icon, '%'), 'btn btn-default btn-xs');
+	$comment_icon = '%d comment';
+	$comments_icon = '%s comments';
+	return comments_popup_link(sprintf($comment_icon, ''), sprintf($comment_icon, '1'), sprintf($comments_icon, '%'), '');
 }// bootstrapBasicCommentsPopupLink
 
 
@@ -246,9 +246,9 @@ function bootstrapBasicPagination($pagination_align_class = 'pagination-center p
 function bootstrapBasicPostOn() 
 {
 	$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
-	if (get_the_time('U') !== get_the_modified_time('U')) {
-		$time_string .= '<time class="updated" datetime="%3$s">%4$s</time>';
-	}
+	// if (get_the_time('U') !== get_the_modified_time('U')) {
+	// 	$time_string .= '<time class="updated" datetime="%3$s">%3$s</time>';
+	// }
 
 	$time_string = sprintf($time_string,
 		esc_attr(get_the_date('c')),
@@ -257,13 +257,23 @@ function bootstrapBasicPostOn()
 		esc_html(get_the_modified_date())
 	);
 
-	printf(__('<span class="posted-on">Posted on %1$s</span><span class="byline"> by %2$s</span>', 'bootstrap-basic'),
-		sprintf('<a href="%1$s" title="%2$s" rel="bookmark">%3$s</a>',
+	printf(__('<span class="byline"> Written by %2$s</span> <span class="posted-on">on %1$s</span>', 'bootstrap-basic'),
+		// sprintf('<a href="%1$s" title="%2$s" rel="bookmark">%3$s</a>',
+		// 	esc_url(get_permalink()),
+		// 	esc_attr(get_the_time()),
+		// 	$time_string
+		// ),
+		// sprintf('<span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s">%3$s</a></span>',
+		// 	esc_url(get_author_posts_url(get_the_author_meta('ID'))),
+		// 	esc_attr(sprintf(__('View all posts by %s', 'bootstrap-basic'), get_the_author())),
+		// 	esc_html(get_the_author())
+		// )
+		sprintf('%3$s',
 			esc_url(get_permalink()),
 			esc_attr(get_the_time()),
 			$time_string
 		),
-		sprintf('<span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s">%3$s</a></span>',
+		sprintf('<span class="author vcard">%3$s</span>',
 			esc_url(get_author_posts_url(get_the_author_meta('ID'))),
 			esc_attr(sprintf(__('View all posts by %s', 'bootstrap-basic'), get_the_author())),
 			esc_html(get_the_author())
