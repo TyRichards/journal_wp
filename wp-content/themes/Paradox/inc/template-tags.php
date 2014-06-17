@@ -14,7 +14,7 @@
  */
 function bootstrapBasicCategoriesList($categories_list = '') 
 {
-	return sprintf('<small><i class="fa fa-th-list fa-left" title="' . __('Posted in', 'bootstrap-basic') . '"></i>%1$s</small>', $categories_list);
+	return sprintf('<small><i class="fa fa-th-list fa-left" title="' . __('Posted in', 'bootstrap-basic') . '"></i> %1$s</small>', $categories_list);
 }// bootstrapBasicCategoriesList
 
 
@@ -127,7 +127,7 @@ function bootstrapBasicCommentsPopupLink()
 {
 	$comment_icon = '%d comment';
 	$comments_icon = '%s comments';
-	return comments_popup_link(sprintf($comment_icon, ''), sprintf($comment_icon, '1'), sprintf($comments_icon, '%'), '');
+	return comments_popup_link(sprintf($comments_icon, '0'), sprintf($comment_icon, '1'), sprintf($comments_icon, '%'), '');
 }// bootstrapBasicCommentsPopupLink
 
 

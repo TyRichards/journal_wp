@@ -47,13 +47,9 @@
 
 	<footer class="entry-meta text-center">
 
-		<!-- comments -->	
-		<?php if (! post_password_required() && (comments_open() || '0' != get_comments_number())) { ?> 
-		<span class="comments-button"><?php bootstrapBasicCommentsPopupLink(); ?></span>
-		<?php } //endif; ?>  
-
 		<?php if ('post' == get_post_type()) { // Hide category and tag text for pages on Search ?> 
 
+		<p>You just read <i>"<?php the_title() ?>"</i></p>
 		<div class="entry-meta-category-tag">
 			<?php
 				/* translators: used between list items, there is a space after the comma */
@@ -75,6 +71,12 @@
 			</span>
 			<?php } // End if $tags_list ?> 
 		</div><!--.entry-meta-category-tag-->
+
+		<!-- comments -->	
+		<?php if (! post_password_required() && (comments_open() || '0' != get_comments_number())) { ?> 
+		<span class="comments-button"><?php bootstrapBasicCommentsPopupLink(); ?></span>
+		<?php } //endif; ?>  
+		
 		<?php } // End if 'post' == get_post_type() ?> 
 
 	</footer><!-- .entry-meta -->
