@@ -487,22 +487,34 @@ article.post .entry-title, .h2, .gform_wrapper .gform_title, .h3, .h4, .h5, .h6 
 h1 small,
 h1 .small,
 h1 .gform_wrapper .gform_description,
-.gform_wrapper h1 .gform_description, h2 small,
+.gform_wrapper h1 .gform_description,
+h1 .gform_wrapper .gfield_description.validation_message,
+.gform_wrapper h1 .gfield_description.validation_message, h2 small,
 h2 .small,
 h2 .gform_wrapper .gform_description,
-.gform_wrapper h2 .gform_description, h3 small,
+.gform_wrapper h2 .gform_description,
+h2 .gform_wrapper .gfield_description.validation_message,
+.gform_wrapper h2 .gfield_description.validation_message, h3 small,
 h3 .small,
 h3 .gform_wrapper .gform_description,
-.gform_wrapper h3 .gform_description, h4 small,
+.gform_wrapper h3 .gform_description,
+h3 .gform_wrapper .gfield_description.validation_message,
+.gform_wrapper h3 .gfield_description.validation_message, h4 small,
 h4 .small,
 h4 .gform_wrapper .gform_description,
-.gform_wrapper h4 .gform_description, h5 small,
+.gform_wrapper h4 .gform_description,
+h4 .gform_wrapper .gfield_description.validation_message,
+.gform_wrapper h4 .gfield_description.validation_message, h5 small,
 h5 .small,
 h5 .gform_wrapper .gform_description,
-.gform_wrapper h5 .gform_description, h6 small,
+.gform_wrapper h5 .gform_description,
+h5 .gform_wrapper .gfield_description.validation_message,
+.gform_wrapper h5 .gfield_description.validation_message, h6 small,
 h6 .small,
 h6 .gform_wrapper .gform_description,
 .gform_wrapper h6 .gform_description,
+h6 .gform_wrapper .gfield_description.validation_message,
+.gform_wrapper h6 .gfield_description.validation_message,
 .h1 small,
 article.post .entry-title small,
 .h1 .small,
@@ -510,24 +522,39 @@ article.post .entry-title .small,
 .h1 .gform_wrapper .gform_description,
 .gform_wrapper .h1 .gform_description,
 article.post .entry-title .gform_wrapper .gform_description,
-.gform_wrapper article.post .entry-title .gform_description, .h2 small, .gform_wrapper .gform_title small,
+.gform_wrapper article.post .entry-title .gform_description,
+.h1 .gform_wrapper .gfield_description.validation_message,
+.gform_wrapper .h1 .gfield_description.validation_message,
+article.post .entry-title .gform_wrapper .gfield_description.validation_message,
+.gform_wrapper article.post .entry-title .gfield_description.validation_message, .h2 small, .gform_wrapper .gform_title small,
 .h2 .small,
 .gform_wrapper .gform_title .small,
 .h2 .gform_wrapper .gform_description,
 .gform_wrapper .h2 .gform_description,
-.gform_wrapper .gform_title .gform_description, .h3 small,
+.gform_wrapper .gform_title .gform_description,
+.h2 .gform_wrapper .gfield_description.validation_message,
+.gform_wrapper .h2 .gfield_description.validation_message,
+.gform_wrapper .gform_title .gfield_description.validation_message, .h3 small,
 .h3 .small,
 .h3 .gform_wrapper .gform_description,
-.gform_wrapper .h3 .gform_description, .h4 small,
+.gform_wrapper .h3 .gform_description,
+.h3 .gform_wrapper .gfield_description.validation_message,
+.gform_wrapper .h3 .gfield_description.validation_message, .h4 small,
 .h4 .small,
 .h4 .gform_wrapper .gform_description,
-.gform_wrapper .h4 .gform_description, .h5 small,
+.gform_wrapper .h4 .gform_description,
+.h4 .gform_wrapper .gfield_description.validation_message,
+.gform_wrapper .h4 .gfield_description.validation_message, .h5 small,
 .h5 .small,
 .h5 .gform_wrapper .gform_description,
-.gform_wrapper .h5 .gform_description, .h6 small,
+.gform_wrapper .h5 .gform_description,
+.h5 .gform_wrapper .gfield_description.validation_message,
+.gform_wrapper .h5 .gfield_description.validation_message, .h6 small,
 .h6 .small,
 .h6 .gform_wrapper .gform_description,
-.gform_wrapper .h6 .gform_description {
+.gform_wrapper .h6 .gform_description,
+.h6 .gform_wrapper .gfield_description.validation_message,
+.gform_wrapper .h6 .gfield_description.validation_message {
   font-weight: normal;
   line-height: 1;
   color: #999999;
@@ -545,14 +572,20 @@ h1 small,
 h1 .small,
 h1 .gform_wrapper .gform_description,
 .gform_wrapper h1 .gform_description,
+h1 .gform_wrapper .gfield_description.validation_message,
+.gform_wrapper h1 .gfield_description.validation_message,
 h2 small,
 h2 .small,
 h2 .gform_wrapper .gform_description,
 .gform_wrapper h2 .gform_description,
+h2 .gform_wrapper .gfield_description.validation_message,
+.gform_wrapper h2 .gfield_description.validation_message,
 h3 small,
 h3 .small,
 h3 .gform_wrapper .gform_description,
-.gform_wrapper h3 .gform_description {
+.gform_wrapper h3 .gform_description,
+h3 .gform_wrapper .gfield_description.validation_message,
+.gform_wrapper h3 .gfield_description.validation_message {
   font-size: 65%;
 }
 
@@ -568,14 +601,20 @@ h4 small,
 h4 .small,
 h4 .gform_wrapper .gform_description,
 .gform_wrapper h4 .gform_description,
+h4 .gform_wrapper .gfield_description.validation_message,
+.gform_wrapper h4 .gfield_description.validation_message,
 h5 small,
 h5 .small,
 h5 .gform_wrapper .gform_description,
 .gform_wrapper h5 .gform_description,
+h5 .gform_wrapper .gfield_description.validation_message,
+.gform_wrapper h5 .gfield_description.validation_message,
 h6 small,
 h6 .small,
 h6 .gform_wrapper .gform_description,
-.gform_wrapper h6 .gform_description {
+.gform_wrapper h6 .gform_description,
+h6 .gform_wrapper .gfield_description.validation_message,
+.gform_wrapper h6 .gfield_description.validation_message {
   font-size: 75%;
 }
 
@@ -631,7 +670,8 @@ p {
 /* line 78, ../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.0.3.0/vendor/assets/stylesheets/bootstrap/_type.scss */
 small,
 .small,
-.gform_wrapper .gform_description {
+.gform_wrapper .gform_description,
+.gform_wrapper .gfield_description.validation_message {
   font-size: 85%;
 }
 
@@ -823,7 +863,9 @@ blockquote p:last-child {
 blockquote small,
 blockquote .small,
 blockquote .gform_wrapper .gform_description,
-.gform_wrapper blockquote .gform_description {
+.gform_wrapper blockquote .gform_description,
+blockquote .gform_wrapper .gfield_description.validation_message,
+.gform_wrapper blockquote .gfield_description.validation_message {
   display: block;
   line-height: 1.95;
   color: #999999;
@@ -832,7 +874,9 @@ blockquote .gform_wrapper .gform_description,
 blockquote small:before,
 blockquote .small:before,
 blockquote .gform_wrapper .gform_description:before,
-.gform_wrapper blockquote .gform_description:before {
+.gform_wrapper blockquote .gform_description:before,
+blockquote .gform_wrapper .gfield_description.validation_message:before,
+.gform_wrapper blockquote .gfield_description.validation_message:before {
   content: '\2014 \00A0';
 }
 /* line 248, ../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.0.3.0/vendor/assets/stylesheets/bootstrap/_type.scss */
@@ -847,21 +891,27 @@ blockquote.pull-right p,
 blockquote.pull-right small,
 blockquote.pull-right .small,
 blockquote.pull-right .gform_wrapper .gform_description,
-.gform_wrapper blockquote.pull-right .gform_description {
+.gform_wrapper blockquote.pull-right .gform_description,
+blockquote.pull-right .gform_wrapper .gfield_description.validation_message,
+.gform_wrapper blockquote.pull-right .gfield_description.validation_message {
   text-align: right;
 }
 /* line 260, ../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.0.3.0/vendor/assets/stylesheets/bootstrap/_type.scss */
 blockquote.pull-right small:before,
 blockquote.pull-right .small:before,
 blockquote.pull-right .gform_wrapper .gform_description:before,
-.gform_wrapper blockquote.pull-right .gform_description:before {
+.gform_wrapper blockquote.pull-right .gform_description:before,
+blockquote.pull-right .gform_wrapper .gfield_description.validation_message:before,
+.gform_wrapper blockquote.pull-right .gfield_description.validation_message:before {
   content: '';
 }
 /* line 263, ../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.0.3.0/vendor/assets/stylesheets/bootstrap/_type.scss */
 blockquote.pull-right small:after,
 blockquote.pull-right .small:after,
 blockquote.pull-right .gform_wrapper .gform_description:after,
-.gform_wrapper blockquote.pull-right .gform_description:after {
+.gform_wrapper blockquote.pull-right .gform_description:after,
+blockquote.pull-right .gform_wrapper .gfield_description.validation_message:after,
+.gform_wrapper blockquote.pull-right .gfield_description.validation_message:after {
   content: '\00A0 \2014';
 }
 
@@ -10074,11 +10124,6 @@ Link: https://gist.github.com/jgarber/2302238
   padding-bottom: 135px;
 }
 
-/* line 31, ../scss/partials/_layouts.scss */
-.body-content .masthead, .body-content .primary-content, .body-content .block-section {
-  border-bottom: 1px solid #070707;
-}
-
 /* line 38, ../scss/partials/_layouts.scss */
 .primary-content {
   padding-top: 25px;
@@ -10098,7 +10143,6 @@ Link: https://gist.github.com/jgarber/2302238
 
 /* line 62, ../scss/partials/_layouts.scss */
 .small-footer {
-  border-top: 1px solid #070707;
   padding: 25px 0;
 }
 /* line 66, ../scss/partials/_layouts.scss */
@@ -10130,7 +10174,7 @@ ol {
 }
 
 /* line 32, ../scss/partials/_modules.scss */
-small, .small, .gform_wrapper .gform_description {
+small, .small, .gform_wrapper .gform_description, .gform_wrapper .gfield_description.validation_message {
   line-height: 1.5 !important;
 }
 
@@ -10586,8 +10630,31 @@ h1, h2, h3, h4, h5, h6 {
 .gform_wrapper .gform_button {
   margin-top: 15px;
 }
+/* line 450, ../scss/partials/_modules.scss */
+.gform_wrapper .gfield_description.validation_message {
+  color: #c0392b;
+  display: none;
+}
+/* line 455, ../scss/partials/_modules.scss */
+.gform_wrapper .gform_confirmation_wrapper {
+  text-align: center;
+}
 
-/* line 454, ../scss/partials/_modules.scss */
+/* line 458, ../scss/partials/_modules.scss */
+.validation_error {
+  display: none;
+}
+
+/* line 463, ../scss/partials/_modules.scss */
+#gform_wrapper_1 .gform_title {
+  text-align: center;
+}
+/* line 464, ../scss/partials/_modules.scss */
+#gform_wrapper_1 .gform_description {
+  text-align: center;
+}
+
+/* line 469, ../scss/partials/_modules.scss */
 .body-content .gform_body ul li:before {
   font-family: inherit;
   content: none;
@@ -10595,42 +10662,42 @@ h1, h2, h3, h4, h5, h6 {
   color: inherit;
 }
 
-/* line 462, ../scss/partials/_modules.scss */
+/* line 477, ../scss/partials/_modules.scss */
 .ginput_container input, .ginput_container select, .ginput_container textarea {
   padding-left: 8px;
   padding-right: 8px;
 }
 
-/* line 466, ../scss/partials/_modules.scss */
+/* line 481, ../scss/partials/_modules.scss */
 .logos {
   background: #eeeeee;
   padding-top: 40px;
   padding-bottom: 40px;
   border-bottom: 1px solid #070707;
 }
-/* line 472, ../scss/partials/_modules.scss */
+/* line 487, ../scss/partials/_modules.scss */
 .logos .container .cred-logo.trec {
   padding-left: 50px;
   padding-right: 50px;
 }
 
-/* line 481, ../scss/partials/_modules.scss */
+/* line 496, ../scss/partials/_modules.scss */
 .body-content p {
   margin: 35px 0 0 0;
 }
 
-/* line 487, ../scss/partials/_modules.scss */
+/* line 502, ../scss/partials/_modules.scss */
 .lead {
   font-size: 18.75px;
   font-weight: normal;
 }
 
-/* line 494, ../scss/partials/_modules.scss */
+/* line 509, ../scss/partials/_modules.scss */
 .primary-content {
   background-color: #ffffff;
   position: relative;
 }
-/* line 497, ../scss/partials/_modules.scss */
+/* line 512, ../scss/partials/_modules.scss */
 .primary-content .sidebar.background {
   display: block;
   opacity: 100;
@@ -10649,18 +10716,18 @@ h1, h2, h3, h4, h5, h6 {
   -o-background-size: cover;
   background-size: cover;
 }
-/* line 519, ../scss/partials/_modules.scss */
+/* line 534, ../scss/partials/_modules.scss */
 .primary-content .sidebar.background .container {
   height: 100%;
   padding-top: 0;
   padding-bottom: 0;
 }
-/* line 524, ../scss/partials/_modules.scss */
+/* line 539, ../scss/partials/_modules.scss */
 .primary-content .sidebar.background .col-sm-4 {
   position: absolute;
   height: 100%;
 }
-/* line 527, ../scss/partials/_modules.scss */
+/* line 542, ../scss/partials/_modules.scss */
 .primary-content .sidebar.background .col-sm-4 div {
   position: absolute;
   right: 0;
@@ -10673,7 +10740,7 @@ h1, h2, h3, h4, h5, h6 {
   -o-background-size: cover;
   background-size: cover;
 }
-/* line 538, ../scss/partials/_modules.scss */
+/* line 553, ../scss/partials/_modules.scss */
 .primary-content .sidebar.background .col-sm-4 div img {
   height: 100% !important;
   width: auto;
@@ -10682,37 +10749,37 @@ h1, h2, h3, h4, h5, h6 {
   right: 0;
 }
 
-/* line 554, ../scss/partials/_modules.scss */
+/* line 569, ../scss/partials/_modules.scss */
 .widget ul.menu {
   list-style: none;
   padding-left: 0;
 }
 
-/* line 559, ../scss/partials/_modules.scss */
+/* line 574, ../scss/partials/_modules.scss */
 .body-content .widget {
   padding-bottom: 50px;
 }
 
-/* line 563, ../scss/partials/_modules.scss */
+/* line 578, ../scss/partials/_modules.scss */
 .sidebar .widget > div {
   margin-top: 25px;
 }
 
-/* line 567, ../scss/partials/_modules.scss */
+/* line 582, ../scss/partials/_modules.scss */
 .sidebar .widget div > ul, ol {
   padding-left: 0px;
 }
-/* line 570, ../scss/partials/_modules.scss */
+/* line 585, ../scss/partials/_modules.scss */
 .sidebar .widget div > ul li, ol li {
   margin-bottom: 10px;
 }
 
-/* line 575, ../scss/partials/_modules.scss */
+/* line 590, ../scss/partials/_modules.scss */
 .footer .widget {
   padding-bottom: 0px !important;
 }
 
-/* line 579, ../scss/partials/_modules.scss */
+/* line 594, ../scss/partials/_modules.scss */
 .widget_sp_image img {
   height: auto;
   -moz-border-radius: 4px;
@@ -10720,17 +10787,17 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 4px;
 }
 
-/* line 584, ../scss/partials/_modules.scss */
+/* line 599, ../scss/partials/_modules.scss */
 .small-footer .menu li {
   display: inline;
 }
 
-/* line 590, ../scss/partials/_modules.scss */
+/* line 605, ../scss/partials/_modules.scss */
 .footer {
   background-color: #202020;
 }
 
-/* line 596, ../scss/partials/_modules.scss */
+/* line 611, ../scss/partials/_modules.scss */
 .btn-play {
   z-index: 1000;
   position: absolute;
@@ -10741,7 +10808,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: -40px;
 }
 
-/* line 606, ../scss/partials/_modules.scss */
+/* line 621, ../scss/partials/_modules.scss */
 .player {
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
@@ -10749,7 +10816,7 @@ h1, h2, h3, h4, h5, h6 {
   background: #000000;
 }
 
-/* line 614, ../scss/partials/_modules.scss */
+/* line 629, ../scss/partials/_modules.scss */
 .flex-video {
   padding-top: 0px;
   background: #d5d5d5;
@@ -10757,7 +10824,7 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-border-radius: 4px;
   border-radius: 4px;
 }
-/* line 619, ../scss/partials/_modules.scss */
+/* line 634, ../scss/partials/_modules.scss */
 .flex-video img {
   position: absolute;
   top: 0;
@@ -10765,7 +10832,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   height: 100%;
 }
-/* line 627, ../scss/partials/_modules.scss */
+/* line 642, ../scss/partials/_modules.scss */
 .flex-video iframe {
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
@@ -10773,7 +10840,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 5px;
 }
 
-/* line 633, ../scss/partials/_modules.scss */
+/* line 648, ../scss/partials/_modules.scss */
 .flex-video.widescreen {
   padding-bottom: 56%;
 }

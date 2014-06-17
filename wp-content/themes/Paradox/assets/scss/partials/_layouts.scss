@@ -29,7 +29,7 @@ body > header {
     // background: image-url('cream_dust.png') repeat;
 
     .masthead, .primary-content, .block-section {
-        border-bottom: 1px solid darken($body-bg, 10%);             
+        // border-bottom: 1px solid darken($body-bg, 10%);             
     }    
 }
 
@@ -60,7 +60,7 @@ body > header {
 // Small Footer Section /////////////////////////////////////////////////////////////////
 
 .small-footer {
-    border-top: 1px solid darken($footer-bg-color, 10%);
+    // border-top: 1px solid darken($footer-bg-color, 10%);
     padding: $space-sm-vert;
 
     ul, ol, p {

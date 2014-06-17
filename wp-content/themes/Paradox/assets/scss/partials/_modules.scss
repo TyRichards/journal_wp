@@ -446,8 +446,23 @@ h1, h2, h3, h4, h5, h6 {
     .gform_button { 
         @extend .btn-primary, .btn-block; 
         margin-top: 15px;
+    }    
+    .gfield_description.validation_message {
+        @extend .small;
+        color: $brand-danger;
+        display: none;
     }
+    .gform_confirmation_wrapper { text-align: center; }
 }   
+
+.validation_error {
+    display: none;
+}
+
+#gform_wrapper_1 {
+    .gform_title { text-align: center; }
+    .gform_description { text-align: center; }
+}
 
 
 .body-content .gform_body {
