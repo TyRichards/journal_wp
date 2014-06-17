@@ -1,6 +1,6 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<!-- <h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1> -->
+		<h2 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>		
 
 		<?php if ('post' == get_post_type()) { ?> 
 		<div class="entry-meta">		
@@ -38,6 +38,13 @@
 	</div><!-- .entry-content -->
 	<?php } //endif; ?> 
 
+	<div class="well well-lg text-center">
+		<div class="row">
+			<?php gravity_form(1, true, true, false, null, false, 50); ?>
+		</div>
+	</div>
+
+
 	<footer class="entry-meta text-center">
 
 		<!-- comments -->	
@@ -46,6 +53,7 @@
 		<?php } //endif; ?>  
 
 		<?php if ('post' == get_post_type()) { // Hide category and tag text for pages on Search ?> 
+
 		<div class="entry-meta-category-tag">
 			<?php
 				/* translators: used between list items, there is a space after the comma */
@@ -69,10 +77,5 @@
 		</div><!--.entry-meta-category-tag-->
 		<?php } // End if 'post' == get_post_type() ?> 
 
-		<div class="well well-lg">
-			<div class="row">
-				<?php gravity_form(1, true, true, false, null, false, 50); ?>
-			</div>
-		</div>
 	</footer><!-- .entry-meta -->
 </article><!-- #post-## -->

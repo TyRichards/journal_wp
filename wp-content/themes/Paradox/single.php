@@ -19,30 +19,34 @@
     </div>
 </section>	
 
-				<div class="col-md-<?php echo $main_column_size; ?> content-area" id="main-column">
-					<main id="main" class="site-main" role="main">
-						<?php 
-						while (have_posts()) {
-							the_post();
+<section class="primary-content">
+    <div class="container">    
+        <div class="row">    
+            <div class="main-col col-md-8 col-md-offset-2 page-content">              
+				<?php 
+				while (have_posts()) {
+					the_post();
 
-							get_template_part('content', get_post_format());
+					get_template_part('content', get_post_format());
 
-							echo "\n\n";
-							
-							bootstrapBasicPagination();
+					echo "\n\n";
+					
+					bootstrapBasicPagination();
 
-							echo "\n\n";
-							
-							// If comments are open or we have at least one comment, load up the comment template
-							if (comments_open() || '0' != get_comments_number()) {
-								comments_template();
-							}
+					echo "\n\n";
+					
+					// If comments are open or we have at least one comment, load up the comment template
+					if (comments_open() || '0' != get_comments_number()) {
+						comments_template();
+					}
 
-							echo "\n\n";
+					echo "\n\n";
 
-						} //endwhile;
-						?> 
-					</main>
-				</div>
+				} //endwhile;
+				?> 
+			</div> <!-- .main-col -->
+		</div> <!-- .row -->
+	</div> <!-- .container -->
+</section> <!-- .primary-content -->
 
 <?php get_footer(); ?> 

@@ -14,7 +14,7 @@ a:hover {
 }
 
 h1 {
-    color: $h1-color;
+    // color: $h1-color;
     // font-family: $font-family-display!important;
 }
 
@@ -27,6 +27,15 @@ ul li {
 ol {
     // counter-reset: foo;
     display: table;
+}
+
+small, .small {
+    line-height: 1.5!important;
+}
+
+.pagination-center {
+    text-align: center;
+    ul.pagination { padding-left: 0 }
 }
 
 .body-content {
@@ -148,16 +157,31 @@ header {
 
 // Blog Article //////////////////////////////////////////////////////////////
 
-article {
+article.post:first-child {
+    h2.entry-title { display: none; }
+    border: none;
+    margin-top: 0;
+}
+
+article.post {
+    border-top: 1px solid #bbbbbb;
+    margin-top: 70px;
+    .entry-title {
+        @extend .h1;
+        font-style: normal;
+        margin-bottom: 25px;
+        a {
+            color: $brand-dark;        
+            &:hover { color: $brand-primary }
+        }        
+    }
     .entry-header { 
         font-style: italic;
         font-family: $font-family-serif; 
         text-align: center;
     }
     .entry-content {
-        border-bottom: 1px solid #bbbbbb;
-        padding-bottom: 55px;
-        margin-bottom: 29px;
+        margin-bottom: 50px;
     }
     .gform-wrapper {
         // @extend .well
@@ -166,6 +190,10 @@ article {
         margin-bottom: 55px;
         margin-top: 10px;
     }
+}
+
+.pagination > li > a, .pagination > li > span {
+    padding: 1px 15px;
 }
 
 .slash {
@@ -396,10 +424,6 @@ h1, h2, h3, h4, h5, h6 {
         // padding-right: 15px;        
         color: $list-bullet-color;
     }
-}
-
-small, .small {
-    line-height: 1.5!important;
 }
 
 // Gravity Forms

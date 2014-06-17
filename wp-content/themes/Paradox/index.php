@@ -22,7 +22,7 @@
 <section class="primary-content">
     <div class="container">    
         <div class="row">    
-            <article class="main-col col-md-8 col-md-offset-2 page-content">  								
+            <div class="main-col col-md-8 col-md-offset-2 page-content">  								
 				<?php if (have_posts()) { ?> 
 				<?php 
 				// start the loop
@@ -42,7 +42,7 @@
 				<?php } else { ?> 
 				<?php get_template_part('no-results', 'index'); ?>
 				<?php } // endif; ?> 					
-			</article>
+			</div>
 		</div> <!-- .row -->
 	</div> <!-- .container -->
 </section> <!-- .primary-content -->
