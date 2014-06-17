@@ -54,7 +54,7 @@
 								<?php // echo esc_attr(get_bloginfo('name', 'display')); ?>
 								<img src="<?php echo get_template_directory_uri(); ?>/assets/images/symbol.png">
 							</a>				
-							<p class="small navbar-text text-center">You're reading <a href="<?php echo esc_url(home_url('/')); ?>"><?php echo esc_attr(get_bloginfo('name', 'display')); ?></a>, a collection of articles from <a href="http://paradoxcreative.com" target="_blank">Paradox</a>. <br class="br-visible" style="display:none"> Happy <?php echo date('l');?>.</p>	
+							<p class="small navbar-text text-center">You're reading <a href="<?php echo esc_url(home_url('/')); ?>"><?php echo esc_attr(get_bloginfo('name', 'display')); ?></a>, <br class="br-visible" style="display:none">a collection of articles from <a href="http://paradoxcreative.com" target="_blank">Paradox</a>. <br class="br-visible" style="display:none"> Happy <?php echo date('l');?>.</p>	
 							<img class="top-symbol visible-xs" src="<?php echo get_template_directory_uri(); ?>/assets/images/symbol.png">							
 						</div>						
 <!-- 						<div class="collapse navbar-collapse navbar-primary-collapse">
