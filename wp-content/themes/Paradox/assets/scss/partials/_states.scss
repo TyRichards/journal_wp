@@ -55,23 +55,29 @@
 // Extra small devices only (phones, less than 768px)
 @media (max-width: $screen-xs-max) {
 
-    .clipboard-icon {        
-        padding-left: 109px;
-        padding-top: 13px;        
+    // .masthead, .primary-content, .more-foot, .small-footer, .main-col {
+    //     padding-top: ($space-lg - 50);        
+    //     padding-bottom: ($space-lg - 50);
+    // }
+
+    .masthead {
+        padding-top: 18px;
+        padding-bottom: 63px;
+    }    
+
+    .br-visible { display: block!important; }
+
+    .entry-meta { 
+        .byline, .posted-on, .comments-link {
+            font-size: 15px;
+        }
+        .posted-on { display: block; line-height: 1; } 
+        .slash { display: none; } 
     }
 
-    .footer-logo {
-        padding-bottom: $space-sm;
-        display: block;
-    }    
-
-    .logos .container div {
-        padding: 10px 75px;
-    }    
-    
-    .masthead, .primary-content, .more-foot, .small-footer, .main-col {
-        padding-top: ($space-lg - 50);        
-        padding-bottom: ($space-lg - 50);
+    .navbar-text {
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
     .body-content {

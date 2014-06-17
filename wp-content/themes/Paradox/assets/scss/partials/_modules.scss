@@ -13,6 +13,11 @@ a:hover {
     @include transition(all 0.2s ease-out);
 }
 
+textarea {
+    max-height: 185px;
+    resize: none;
+}
+
 h1 {
     // color: $h1-color;
     // font-family: $font-family-display!important;
@@ -437,11 +442,13 @@ h1, h2, h3, h4, h5, h6 {
     .gform_title { @extend .h2; margin-top: 0!important; }
     .gform_description { 
         @extend .small; 
-        display: block;        
+        display: block;  
+        margin-top: 20px;      
     }
     .gform_fields { 
         @extend .row; 
         .gfield { @extend .col-sm-6 }
+        .gf_full { @extend .col-sm-12 }
     }
     .gform_button { 
         @extend .btn-primary, .btn-block; 
@@ -459,7 +466,7 @@ h1, h2, h3, h4, h5, h6 {
     display: none;
 }
 
-#gform_wrapper_1 {
+.gform_wrapper {
     .gform_title { text-align: center; }
     .gform_description { text-align: center; }
 }
@@ -476,19 +483,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .ginput_container input, .ginput_container select, .ginput_container textarea { padding-left: 8px; padding-right: 8px; }
 
-// Logos Sections /////////////////////////////////////////////////////////////////
+// Logo  /////////////////////////////////////////////////////////////////
 
-.logos {
-    background: $gray-lighter;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    border-bottom: 1px solid darken($body-bg, 10%); 
-
-    .container .cred-logo.trec {
-        padding-left: 50px;
-        padding-right: 50px;
-    }
-}
+.top-symbol { margin: 50px auto 0 auto; }
 
 // Paragraph /////////////////////////////////////////////////////////////////
 

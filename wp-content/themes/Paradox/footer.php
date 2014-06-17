@@ -12,7 +12,7 @@
 			<footer class="footer">	
 				<?php // get_footer('lg'); ?>
 	      		<section class="small-footer">
-	      			<div class="container col-no-padding-xs">
+	      			<div class="container">
 	      				<div class="row">
 		      				<div class="col-xs-12 col-sm-8">
 				        		<div class="pull-left footer-credits">		        			
