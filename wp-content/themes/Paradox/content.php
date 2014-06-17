@@ -40,7 +40,7 @@
 
 	<div class="well well-lg text-center">
 		<div class="row">
-			<?php gravity_form(1, true, true, false, null, false, 50); ?>
+			<?php gravity_form(1, true, true, false, null, true, 50); ?>
 		</div>
 	</div>
 
@@ -76,7 +76,7 @@
 		<?php if (! post_password_required() && (comments_open() || '0' != get_comments_number())) { ?> 
 		<span class="comments-button"><?php bootstrapBasicCommentsPopupLink(); ?></span>
 		<?php } //endif; ?>  
-		
+
 		<?php } // End if 'post' == get_post_type() ?> 
 
 	</footer><!-- .entry-meta -->
