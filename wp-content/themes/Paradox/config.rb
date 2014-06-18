@@ -13,7 +13,7 @@ http_images_path = "/wp-content/themes/Paradox/assets/images/"
 # images_dir = "assets/images"
 
 
-output_style = :expanded
+output_style = :compressed
 line_comments = true
 preferred_syntax = :scss
 
